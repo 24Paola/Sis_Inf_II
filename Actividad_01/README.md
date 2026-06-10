@@ -5,10 +5,9 @@
 **Squad:** [Nombre del Squad]
 
 **Integrantes:**
-- Integrante 1
-- Integrante 2
-- Integrante 3
-- Integrante 4
+- Snaider Brayan Quispe Janco
+- Jonathan Smith Soraire Rojas
+- Ana Paola Viscarra Chambi
 
 **Fecha:** Junio 2026
 
