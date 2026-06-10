@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ventas - Eco-Distribuidora</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+        .header { background: #2c3e50; color: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; }
+        .header h1 { font-size: 24px; }
+        .nav { margin-bottom: 20px; }
+        .nav a { display: inline-block; background: #3498db; color: white; padding: 10px 20px; text-decoration: none; margin-right: 10px; border-radius: 3px; }
+        .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .section h2 { font-size: 18px; margin-bottom: 15px; color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        th { background: #34495e; color: white; padding: 10px; text-align: left; font-weight: normal; }
+        td { padding: 8px 10px; border-bottom: 1px solid #ecf0f1; }
+        tr:hover { background: #f8f9fa; }
+        .flash { background: #d4edda; color: #155724; padding: 10px; margin-bottom: 20px; border-radius: 3px; }
+        .total-row { background: #f8f9fa; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Ventas - Eco-Distribuidora S.A.</h1>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div class="nav">
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('nueva_venta') }}">+ Nueva Venta</a>
+        <a href="{{ url_for('listar_productos') }}">Ver Productos</a>
+    </div>
+
+    <div class="section">
+        <h2>Historial Completo de Ventas ({{ ventas|length }} registros)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Producto</th><th>Cantidad</th><th>P.Unitario</th><th>Total</th><th>Fecha</th><th>Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for v in ventas %}
+                <tr>
+                    <td>{{ v.id }}</td>
+                    <td>{{ v.producto_nombre }}</td>
+                    <td>{{ v.cantidad }}</td>
+                    <td>${{ "%.2f"|format(v.precio_unitario) }}</td>
+                    <td>${{ "%.2f"|format(v.total) }}</td>
+                    <td>{{ v.fecha }}</td>
+                    <td>{{ v.cliente }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p style="margin-top:10px;font-size:12px;color:#7f8c8d;">
+            Total: {{ ventas|length }} ventas | Sin filtros ni agrupaciones
+        </p>
+    </div>
+</body>
+</html>
