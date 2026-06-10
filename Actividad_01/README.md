@@ -2,7 +2,7 @@
 
 ## Eco-Distribuidora S.A. — Informe de Auditoria Tecnica
 
-**Squad:** [Nombre del Squad]
+**Squad:** DS3
 
 **Integrantes:**
 - Snaider Brayan Quispe Janco
