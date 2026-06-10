@@ -226,3 +226,7 @@ O ingresar manualmente los 50 productos desde la interfaz web en `http://localho
 | Integrante | Firma Digital |
 |---|---|
 | Snaider Brayan Quispe Janco | `SnaiderSsj` |
+| Integrante | Firma Digital |
+|---|---|
+| Ana paola viscarra | `pao024v` |
+
