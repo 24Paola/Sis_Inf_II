@@ -218,3 +218,13 @@ O ingresar manualmente los 50 productos desde la interfaz web en `http://localho
 ---
 
 *Documento generado como parte de la Actividad 1: Auditoria de Sistemas Legacy - "Del Dato a la Decision"*
+
+---
+
+## Firmas del Squad
+
+| Integrante | Rol | Firma Digital |
+|---|---|---|
+| Snaider Brayan Quispe Janco | Auditor Lider | `SnaiderBQJ` |
+| Jonathan Smith Soraire Rojas | Analista de Sistemas | `JonathanSSR` |
+| Ana Paola Viscarra Chambi | Documentacion Tecnica | `AnaPVC` |
